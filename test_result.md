@@ -146,6 +146,9 @@ backend:
       - working: true
         agent: "main"
         comment: "Implemented /api/countries endpoint returning available countries from Radio Browser API"
+      - working: true
+        agent: "testing"
+        comment: "Verified /api/countries endpoint functionality. Successfully retrieves 238 countries from Radio Browser API with proper structure. Each country object contains required 'name' field and additional metadata. Response format is correct JSON array. Endpoint performance is good with proper timeout handling."
         
   - task: "Favorites System"
     implemented: true
