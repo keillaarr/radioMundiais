@@ -213,12 +213,10 @@ metadata:
 
 test_plan:
   current_focus:
-    - "Radio Browser API Integration"
-    - "Station Search Endpoint"
-    - "Countries List Endpoint"
     - "Radio Station Display"
     - "Audio Player"
     - "Search and Filters"
+    - "Favorites Management"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
