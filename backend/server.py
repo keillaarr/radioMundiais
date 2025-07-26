@@ -27,7 +27,7 @@ app = FastAPI()
 api_router = APIRouter(prefix="/api")
 
 # Radio Browser API Base URL  
-RADIO_BROWSER_BASE = "https://www.radio-browser.info/webservice"
+RADIO_BROWSER_BASE = "https://de1.api.radio-browser.info"
 
 # Models
 class RadioStation(BaseModel):
