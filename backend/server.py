@@ -103,7 +103,7 @@ async def fetch_radio_stations(limit: int = 50, country: str = "", name: str = "
 async def fetch_countries():
     """Fetch list of countries from Radio Browser API"""
     try:
-        async with httpx.AsyncClient(timeout=10.0) as client:
+        async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
             url = f"{RADIO_BROWSER_BASE}/json/countries"
             response = await client.get(url)
             response.raise_for_status()
