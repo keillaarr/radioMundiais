@@ -64,7 +64,7 @@ class SearchQuery(BaseModel):
 async def fetch_radio_stations(limit: int = 50, country: str = "", name: str = ""):
     """Fetch radio stations from Radio Browser API"""
     try:
-        async with httpx.AsyncClient(timeout=10.0) as client:
+        async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
             if country:
                 url = f"{RADIO_BROWSER_BASE}/json/stations/bycountry/{country}"
             elif name:
