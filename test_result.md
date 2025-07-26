@@ -116,6 +116,9 @@ backend:
       - working: true
         agent: "main"
         comment: "Successfully integrated with Radio Browser API (https://de1.api.radio-browser.info). Fixed HTTPS endpoint and redirect handling."
+      - working: true
+        agent: "testing"
+        comment: "Re-verified Radio Browser API integration. Successfully fetching stations from https://de1.api.radio-browser.info with proper HTTPS handling and redirect support. All station data fields properly mapped including stationuuid, name, url, country, bitrate, codec, votes. Integration working flawlessly."
         
   - task: "Station Search Endpoint"
     implemented: true
