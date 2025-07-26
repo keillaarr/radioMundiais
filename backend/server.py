@@ -66,11 +66,11 @@ async def fetch_radio_stations(limit: int = 50, country: str = "", name: str = "
     try:
         async with httpx.AsyncClient(timeout=10.0, follow_redirects=True) as client:
             if country:
-                url = f"{RADIO_BROWSER_BASE}/json/stations/bycountry/{country}"
+                url = f"{RADIO_BROWSER_BASE}/json/stations/search?country={country}&limit={limit}"
             elif name:
                 url = f"{RADIO_BROWSER_BASE}/json/stations/search?name={name}&limit={limit}"
             else:
-                url = f"{RADIO_BROWSER_BASE}/json/stations/topvote/{limit}"
+                url = f"{RADIO_BROWSER_BASE}/json/stations/search?order=votes&reverse=true&limit={limit}"
             
             response = await client.get(url)
             response.raise_for_status()
