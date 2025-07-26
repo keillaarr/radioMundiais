@@ -131,6 +131,9 @@ backend:
       - working: true
         agent: "main"
         comment: "Implemented /api/stations endpoint with support for search by name, country, and popular stations"
+      - working: true
+        agent: "testing"
+        comment: "Thoroughly tested /api/stations endpoint. All search parameters working correctly: limit parameter (tested with 10, returns exact count), country filter (tested with 'Brazil', returns appropriate stations), name search (tested with 'BBC', returns matching stations), popular stations (default behavior returns top voted stations). POST /api/search endpoint also working with JSON payload. All responses properly formatted as RadioStation objects."
         
   - task: "Countries List Endpoint"
     implemented: true
